@@ -19,29 +19,43 @@ When one of the cars reach 1000 Meters then the timer will be stopped and the ti
 
 ## Technical
 
-The Pitch is 1000 px long , so that it represents a distance of 1km (1000 meters) but in pixels. 1 pixel = 1 meter.
-Bei generieren von zufälligen Zahlen von der Geschwindigkeit steht das Int für die Zehner Schritte (10 /20 / 30 km/h ) und Double für die Einzer Schritte (1 / 2 / 3 km/h)
+The Pitch is 1000 px long , so that it represents a distance of 1km (1000 meters) but in pixels. 1 pixel = 1 meter. While generating random numbers for the speed, int stands for ten steps (10 / 20 / 30 km/h) and double for the single steps (1 / 2 / 3 / 7 km/h)
 
-So it means:
+It means:
 * 5.5 = 55 km/h
 * 7.6 = 76 km/h
 * 8.2 = 82 km/h
 
-Das Sleep ist auf „7“ms gestellt da nach meinen Rechnungen wenn 7 bei Sleep steht wird eine fast exakte Darstellung der Realität dargestellt.
+Sleep is set for 7 ms , because according to my calculations 7 ms  is almost exact representation of the reality.
 
-Wenn in Realität
-50 km/h = 13 m/s = 76 sec / km
+___
+**Reality:**
+* 50 km/h = 13,88 m/s = 76 sec / km
 
-Wird es im Spiel:
+**Program:**
 
-50 km/h = ~7360 millisekunden / 1000px
+* 50 km/h = ~7360 millisekunden / 1000px
 
-Realität:
+**Compare:**
 
-55 km/h = 15 m/s = 66 sec / km
+Program: 7360 ms / 1000px
 
-Spiel:
-55 km/h = ~6700 millisekunden /1000px
+Reality: 76 sec / 1000 meters
+___
+
+**Reality:**
+
+* 55 km/h = ~15 m/s = 66 sec / km
+
+**Program:**
+
+* 55 km/h = ~6700 millisekunden /1000px
+
+**Compare:**
+
+Program: 6700ms/1000px
+Reality: 66 sec/1000 meters
+___
 
 ## Klassen
 *	Autorennen.java
